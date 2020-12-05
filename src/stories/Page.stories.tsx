@@ -4,20 +4,15 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { Page, PageProps } from './Page';
 
-
 export default {
-  title: 'Example/Page',
-  component: Page,
+	title: 'Example/Page',
+	component: Page,
 } as Meta;
 
 const Template: Story<PageProps> = (args) => <Page {...args} />;
 
 export const LoggedIn = Template.bind({});
-LoggedIn.args = {
-
-};
+LoggedIn.args = {};
 
 export const LoggedOut = Template.bind({});
-LoggedOut.args = {
-
-};
+LoggedOut.args = {};

@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
 export default interface DropDown {
-  label: String;
-  children: React.ReactNode;
+	label: String;
+	children: React.ReactNode;
 }

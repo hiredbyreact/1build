@@ -1,3 +1,3 @@
 export default interface TopNavProps {
-  fullWidth?: Boolean;
+	fullWidth?: Boolean;
 }
