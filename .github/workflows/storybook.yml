@@ -1,23 +1,21 @@
-name: Build and Deploy
+name: Deployment
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
         with:
-          persist-credentials: false
-      - name: Install and Build 🔧
-        run: | # Install npm packages and build the Storybook files
-          yarn
-          yarn build-storybook
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.6.2
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: main # The branch the action should deploy to.
-          FOLDER: docs # The folder that the build-storybook script generates files.
+          node-version: ${{ matrix.node-version }}
+      - name: Install Packages
+        run: yarn
+      - name: Build page
+        run: yarn build-storybook
