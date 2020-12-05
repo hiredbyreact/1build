@@ -5,7 +5,7 @@ import { Button } from '@material-ui/core';
 import ICTABtn from "./ICTABtn";
 import useStyles from "./CTABtn.styles";
 
-const CTABtn: React.FC<ICTABtn> = ({ children, label }) => {
+const CTABtn: React.FC<ICTABtn> = ({ children }) => {
     const classes = useStyles();
 
     return (<Button className={classes.ctaBtn}>

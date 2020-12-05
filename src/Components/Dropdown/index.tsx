@@ -12,9 +12,11 @@ import DropDown from '../CTABtn/ICTABtn';
 
 const Dropdown: React.FC<IDropdown> = ({ children, label }) => {
     const classes = useStyles();
-    const [anchorEl, setAnchorEl] = useState(null);
+    const [anchorEl, setAnchorEl] = useState<Element | null>(null);
 
-    const handleOpen = e => setAnchorEl(e.currentTarget);
+    const handleOpen = (e: React.MouseEvent<HTMLButtonElement>) => {
+        setAnchorEl(e.currentTarget);
+    }
     const handleClose = () => setAnchorEl(null);
 
 
