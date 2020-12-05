@@ -37,7 +37,7 @@
 		"format": "prettier --write src/**/*.ts{,x}",
 		"lint": "tsc --noEmit && eslint --fix src/**/*.ts{,x}",
 		"storybook": "start-storybook -p 6006 -s public",
-		"build-storybook": "build-storybook -s public -o docs"
+		"build-storybook": "build-storybook  --no-dll -s public -o docs"
 	},
 	"browserslist": {
 		"production": [

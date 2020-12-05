@@ -16,6 +16,7 @@ module.exports = {
 		indent: 0,
 		'no-tabs': 0,
 		'react/jsx-closing-tag-location': 0,
+		'no-console': 0,
 		'object-curly-newline': 0,
 		quotes: 0,
 		'eol-last': 0,
