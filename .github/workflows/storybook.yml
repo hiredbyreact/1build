@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v1
 
       - run: yarn
-      - run: yarn build-storybook
+
       - uses: ./
         with:
           milliseconds: 1000
