@@ -31,7 +31,7 @@
     "format": "prettier --write src/**/*.ts{,x}",
     "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public -o docs-build -s ./stories/assets"
+    "build-storybook": "build-storybook -s public -o docs-build"
   },
   "eslintConfig": {
     "extends": [
