@@ -3,9 +3,10 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 
-import { CTABtn, ICTABtn } from '.';
-import { withTheme } from "../../Theme"
+import CTABtn from '.';
+import ICTABtn from "./ICTABtn";
 
+import { withTheme } from "../../Theme"
 
 export default {
     title: 'Button/CTA',

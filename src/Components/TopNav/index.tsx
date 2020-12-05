@@ -35,4 +35,4 @@ const TopNav: React.FC<ITopNav> = ({ fullWidth = false }) => {
     );
 }
 
-export { TopNav, ITopNav }
+export default TopNav;

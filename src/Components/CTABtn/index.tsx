@@ -19,4 +19,4 @@ const CTABtn: React.FC<ICTABtn> = ({ children, label }) => {
     );
 }
 
-export { CTABtn, ICTABtn }
+export default CTABtn;

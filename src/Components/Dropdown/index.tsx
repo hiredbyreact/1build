@@ -6,6 +6,7 @@ import { ExpandMore as ExpandMoreIcon, ExpandLess as ExpandLessIcon } from '@mat
 
 import IDropdown from "./IDropdown";
 import useStyles from "./Dropdown.styles";
+import DropDown from '../CTABtn/ICTABtn';
 
 
 
@@ -37,4 +38,4 @@ const Dropdown: React.FC<IDropdown> = ({ children, label }) => {
     );
 }
 
-export { Dropdown, IDropdown }
+export default Dropdown;

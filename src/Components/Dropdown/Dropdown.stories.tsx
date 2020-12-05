@@ -3,18 +3,17 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { MenuItem } from "@material-ui/core"
-import { Dropdown, IDropdown } from '.';
+import Dropdown from '.';
 import { withTheme } from "../../Theme"
+import DropDown from '../CTABtn/ICTABtn';
 
 export default {
     title: 'Button/Dropdown',
     component: Dropdown,
 } as Meta;
 
-const Template: Story<IDropdown> = (args) => withTheme(<Dropdown {...args}>
-
-
-</Dropdown>);
+type IDropdown = DropDown.type;
+const Template: Story<IDropdown> = (args) => withTheme(<Dropdown {...args} />);
 
 export const Display = Template.bind({});
 Display.args = {
