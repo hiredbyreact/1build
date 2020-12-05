@@ -1,33 +1,21 @@
 module.exports = {
-	extends: [
-		'airbnb-typescript',
-		'airbnb/hooks',
-		'plugin:@typescript-eslint/recommended',
-		'plugin:jest/recommended',
-		'prettier',
-		'prettier/react',
-		'prettier/@typescript-eslint',
-		'plugin:prettier/recommended',
-	],
-	plugins: ['react', '@typescript-eslint', 'jest'],
-	env: {
-		browser: true,
-		es6: true,
-		jest: true,
-	},
-	globals: {
-		Atomics: 'readonly',
-		SharedArrayBuffer: 'readonly',
-	},
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
-		ecmaFeatures: {
-			jsx: true,
-		},
-		ecmaVersion: 2018,
-		sourceType: 'module',
 		project: './tsconfig.json',
+		tsconfigRootDir: '.',
 	},
+	env: {
+		browser: true,
+		'jest/globals': true,
+	},
+	plugins: ['@typescript-eslint', 'react-hooks', 'jest', 'prettier'],
+	extends: [
+		'airbnb',
+		'plugin:@typescript-eslint/recommended',
+		'plugin:import/typescript',
+		'plugin:prettier/recommended',
+		'prettier/@typescript-eslint',
+	],
 	rules: {
 		'@typescript-eslint/no-unused-vars': 0,
 		'@typescript-eslint/ban-types': 0,
@@ -35,11 +23,53 @@ module.exports = {
 		'linebreak-style': 'off',
 		'react/jsx-props-no-spreading': 0,
 		'react/no-unescaped-entities': 0,
-		'prettier/prettier': [
-			'error',
+		/**
+		 * @description rules of eslint official
+		 */
+		/**
+		 * @bug https://github.com/benmosher/eslint-plugin-import/issues/1282
+		 * "import/named" temporary disable.
+		 */
+		'import/named': 'off',
+		/**
+		 * @bug?
+		 * "import/export" temporary disable.
+		 */
+		'import/export': 'off',
+		'import/prefer-default-export': 'off', // Allow single Named-export
+		'import/extensions': 0,
+		'react/jsx-one-expression-per-line': 0,
+		'react/jsx-indent': 0,
+		'react/jsx-indent-props': 0,
+		'no-use-before-define': 0,
+		'no-unused-expressions': [
+			'warn',
 			{
-				endOfLine: 'auto',
+				allowShortCircuit: true,
+				allowTernary: true,
 			},
-		],
+		], // https://eslint.org/docs/rules/no-unused-expressions
+
+		/**
+		 * @description rules of @typescript-eslint
+		 */
+		'@typescript-eslint/prefer-interface': 'off', // also want to use "type"
+		'@typescript-eslint/explicit-function-return-type': 'off', // annoying to force return type
+
+		/**
+		 * @description rules of eslint-plugin-react
+		 */
+		'react/jsx-filename-extension': [
+			'warn',
+			{
+				extensions: ['.jsx', '.tsx'],
+			},
+		], // also want to use with ".tsx"
+		'react/prop-types': 'off', // Is this incompatible with TS props type?
+
+		/**
+		 * @description rules of eslint-plugin-react-hooks
+		 */
+		'react-hooks/rules-of-hooks': 'error',
 	},
 };
