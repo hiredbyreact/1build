@@ -5,7 +5,7 @@ import { AppBar, Toolbar, Button, IconButton, Box, MenuItem } from '@material-ui
 
 import ITopNav from "./ITopNav";
 import useStyles from "./TopNav.styles";
-import { Dropdown } from "../Dropdown";
+import Dropdown from "../Dropdown";
 
 
 

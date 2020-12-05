@@ -18,7 +18,7 @@ const themeProps = {
   theme
 };
 
-const withTheme = WrappedComponent => <ThemeProvider {...themeProps}>
+const withTheme = (WrappedComponent: React.ReactNode) => <ThemeProvider {...themeProps}>
   {WrappedComponent}
 </ThemeProvider>;
 

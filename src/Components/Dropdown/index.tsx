@@ -14,7 +14,7 @@ const Dropdown: React.FC<IDropdown> = ({ children, label }) => {
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = useState(null);
 
-    const handleOpen = (e: React.ChangeEvent<HTMLInputElement>) => setAnchorEl(e.currentTarget);
+    const handleOpen = (e => setAnchorEl(e.currentTarget);
     const handleClose = () => setAnchorEl(null);
 
 

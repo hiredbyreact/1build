@@ -3,6 +3,7 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 import TopNav from '.';
+import ITopNav from './ITopNav';
 import { withTheme } from "../../Theme"
 
 export default {
@@ -11,7 +12,6 @@ export default {
 } as Meta;
 
 
-type ITopNav = TopNav.type;
 const Template: Story<ITopNav> = (args) => withTheme(<TopNav {...args} />);
 
 export const LoggedOut = Template.bind({});

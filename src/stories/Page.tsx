@@ -3,8 +3,8 @@ import React from 'react';
 
 import './page.css';
 import { Typography, Box } from "@material-ui/core";
-import { TopNav } from '../Components/TopNav';
-import { CTABtn } from '../Components/CTABtn';
+import TopNav from '../Components/TopNav';
+import CTABtn from '../Components/CTABtn';
 import imageFile from '../Components/ParallaxImg/svg.png';
 import { withTheme } from "../Theme"
 
