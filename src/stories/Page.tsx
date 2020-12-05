@@ -19,7 +19,6 @@ export interface PageProps {
 export const Page: React.FC<PageProps> = ({ user, onLogin, onLogout, onCreateAccount }) => withTheme(
   <Box component="article">
     <TopNav />
-
     <Box component="section">
       <img src={imageFile} alt="ParallaxImg" />
       <Box component="div">
