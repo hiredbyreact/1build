@@ -17,10 +17,10 @@ const Template: Story<IDropdown> = (args) => withTheme(<Dropdown {...args} />);
 export const Display = Template.bind({});
 Display.args = {
     label: "More",
-    children: <>
+    children: (<>
         <MenuItem onClick={() => console.log("Clicked Pricing")}>Pricing</MenuItem>
         <MenuItem onClick={() => console.log("Clicked Pricing")}> How it works</MenuItem>
         <MenuItem onClick={() => console.log("Clicked Pricing")}> Careers</MenuItem>
-    </>
+    </>)
 };
 

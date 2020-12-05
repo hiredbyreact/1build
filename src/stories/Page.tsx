@@ -14,8 +14,9 @@ export interface PageProps {
 	onCreateAccount: () => void;
 }
 
-export const Page: React.FC<PageProps> = ({ user, onLogin, onLogout, onCreateAccount }) =>
-	withTheme(
+export const Page: React.FC<PageProps> = ({
+ user, onLogin, onLogout, onCreateAccount,
+}) => withTheme(
 		<Box component="article">
 			<TopNav />
 			<Box component="section">
