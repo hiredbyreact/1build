@@ -53,7 +53,7 @@ export const Page: React.FC<PageProps> = () => {
                 <Typography variant="body1">{title}</Typography>
                 <Box component="div">
                   <Typography variant="body1">
-                    {new Date(posted).toLocaleDateString()}
+                    {new Date(posted * 1000).toLocaleDateString()}
                   </Typography>
                   <Typography variant="body1">
                     {author}
