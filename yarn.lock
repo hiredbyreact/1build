@@ -1402,6 +1402,16 @@
   dependencies:
     "@babel/runtime" "^7.4.4"
 
+"@material-ui/lab@^4.0.0-alpha.57":
+  version "4.0.0-alpha.57"
+  resolved "https://registry.yarnpkg.com/@material-ui/lab/-/lab-4.0.0-alpha.57.tgz#e8961bcf6449e8a8dabe84f2700daacfcafbf83a"
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    "@material-ui/utils" "^4.11.2"
+    clsx "^1.0.4"
+    prop-types "^15.7.2"
+    react-is "^16.8.0 || ^17.0.0"
+
 "@material-ui/styles@^4.11.2":
   version "4.11.2"
   resolved "https://registry.yarnpkg.com/@material-ui/styles/-/styles-4.11.2.tgz#e70558be3f41719e8c0d63c7a3c9ae163fdc84cb"
@@ -2567,7 +2577,7 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/eslint-plugin@^4.5.0", "@typescript-eslint/eslint-plugin@^4.7.0", "@typescript-eslint/eslint-plugin@^4.9.0":
+"@typescript-eslint/eslint-plugin@^4.5.0", "@typescript-eslint/eslint-plugin@^4.7.0":
   version "4.9.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-4.9.0.tgz#8fde15743413661fdc086c9f1f5d74a80b856113"
   dependencies:
@@ -2609,7 +2619,7 @@
     "@typescript-eslint/typescript-estree" "4.4.1"
     debug "^4.1.1"
 
-"@typescript-eslint/parser@^4.5.0", "@typescript-eslint/parser@^4.7.0", "@typescript-eslint/parser@^4.9.0":
+"@typescript-eslint/parser@^4.5.0", "@typescript-eslint/parser@^4.7.0":
   version "4.9.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-4.9.0.tgz#bb65f1214b5e221604996db53ef77c9d62b09249"
   dependencies:

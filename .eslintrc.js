@@ -11,6 +11,8 @@ module.exports = {
 	plugins: ['@typescript-eslint', 'react-hooks', 'jest'],
 	extends: ['airbnb', 'plugin:@typescript-eslint/recommended', 'plugin:import/typescript'],
 	rules: {
+		'max-len': 0,
+		'consistent-return': 0,
 		'no-multiple-empty-lines': 0,
 		semi: 0,
 		indent: 0,

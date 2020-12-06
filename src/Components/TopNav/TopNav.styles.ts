@@ -4,6 +4,20 @@ const TopNavStyles = makeStyles((theme) => ({
 	root: {
 		flexGrow: 1,
 		borderBottom: '1px solid #E5DEDE',
+		'& header': {
+			maxWidth: 1000,
+			margin: 'auto',
+		},
+		[theme.breakpoints.down('sm')]: {
+			'& header > div': {
+				margin: '20px auto',
+				flexDirection: 'column',
+			},
+			'& header > div > div': {
+				margin: 'auto',
+				flexDirection: 'column',
+			},
+		},
 	},
 	menuButton: {
 		// marginRight: theme.spacing(2)

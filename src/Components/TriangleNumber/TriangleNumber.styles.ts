@@ -1,14 +1,14 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const Styles = makeStyles((theme) => ({
-	ctaBtn: {
-		padding: '6px 0',
-		color: '#2F80ED',
-		fontSize: 12,
-		fontWeight: 700,
-		textTransform: 'capitalize',
+	triangleNumber: {
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+		width: 28,
+		height: 28,
 		'& svg': {
-			marginLeft: 10,
+			position: 'absolute',
 		},
 	},
 }));
