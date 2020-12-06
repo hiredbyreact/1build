@@ -21,7 +21,7 @@ export interface PageProps {
 export interface IPost {
   "title": String;
   "author": String;
-  "posted": Number;
+  "posted": number;
 }
 
 export const Page: React.FC<PageProps> = () => {
@@ -53,7 +53,7 @@ export const Page: React.FC<PageProps> = () => {
                 <Typography variant="body1">{title}</Typography>
                 <Box component="div">
                   <Typography variant="body1">
-                    {new Date(posted.toString()).toLocaleDateString()}
+                    {new Date(posted).toLocaleDateString()}
                   </Typography>
                   <Typography variant="body1">
                     {author}
